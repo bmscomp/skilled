@@ -1,5 +1,5 @@
 CREATE (james:Developer {name: "James", email: "james@sfeir.com"})
-CREATE (richard:Developer {name: "Richard", email: "linus@sfeir.com"})
+CREATE (richard:Developer {name: "Richard", email: "richard@sfeir.com"})
 CREATE (linus:Developer {name: "Linus", email: "linus@sfeir.com"})
 
 CREATE (java:Skill {name: "Java"})
@@ -15,8 +15,9 @@ CREATE (richard)-[:HAS {level: 5}]->(git)
 CREATE (richard)-[:HAS {level: 5}]->(linux)
 CREATE (linus)-[:HAS {level: 5}]->(linux)
 
-CREATE (google)-[:NEEDS]-(java)
-CREATE (google)-[:NEEDS]-(linux)
-CREATE (facebook)-[:NEEDS]-(git)
-CREATE (apple)-[:NEEDS]-(git)
+CREATE (google)-[:NEEDS]->(java)
+CREATE (google)-[:NEEDS]->(linux)
+CREATE (facebook)-[:NEEDS]->(git)
+CREATE (apple)-[:NEEDS]->(git);
+
 

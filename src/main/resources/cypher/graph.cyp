@@ -10,14 +10,13 @@ CREATE (google:Customer {name: "Google"})
 CREATE (apple:Customer {name: "Apple"})
 CREATE (facebook:Customer {name: "Facebook"})
 
-CREATE (james)-[:HAS {level: 5}]->(java)
-CREATE (richard)-[:HAS {level: 5}]->(git)
-CREATE (richard)-[:HAS {level: 5}]->(linux)
-CREATE (linus)-[:HAS {level: 5}]->(linux)
+CREATE (james)-[:SKILLED_ON {level: 5}]->(java)
+CREATE (richard)-[:SKILLED_ON {level: 5}]->(git)
+CREATE (richard)-[:SKILLED_ON {level: 5}]->(linux)
+CREATE (linus)-[:SKILLED_ON {level: 5}]->(linux)
 
-CREATE (google)-[:NEEDS]->(java)
-CREATE (google)-[:NEEDS]->(linux)
-CREATE (facebook)-[:NEEDS]->(git)
-CREATE (apple)-[:NEEDS]->(git);
-
+CREATE (google)-[:WORKS_WITH]->(java)
+CREATE (google)-[:WORKS_WITH]->(linux)
+CREATE (facebook)-[:WORKS_WITH]->(git)
+CREATE (apple)-[:WORKS_WITH]->(git);
 

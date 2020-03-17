@@ -9,7 +9,7 @@ class SkilledApplicationTests {
 
 	@Test
 	void contextLoads() {
-		
+
 	}
 
 }
